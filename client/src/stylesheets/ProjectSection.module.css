@@ -1,0 +1,48 @@
+
+.panel {
+    min-height: 100vh;
+    background-color: rgb(19, 19, 19);
+    padding-bottom:20vh;
+}
+
+.projectHeader {
+    font-size: clamp(2rem, 5vw + 1.5rem, 8rem);
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    margin-bottom:2rem;
+}
+
+.projectsHolder {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 95%;
+    padding-left:2.5%;
+    gap:10px;
+}
+
+.project {
+    width: 45.1vw;
+    height: 23.5vw;
+    background-color: white;
+    border-radius:7px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.project:nth-of-type(1){
+    background-image:url(./images/cleancardsIMG.png) ;
+}
+.project:nth-of-type(2){
+    background-image:url(./images/designe2IMG.png) ;
+}
+.project:nth-of-type(3){    
+    background-image:url(./images/yelpcampNEW.jpg) ;
+    background-size: cover;
+}
+.project:nth-of-type(4){    
+    background-image:url(./images/purewebdevIMG.jpg) ;
+    background-size: 100% 100%;
+    background-position: center 0;
+}

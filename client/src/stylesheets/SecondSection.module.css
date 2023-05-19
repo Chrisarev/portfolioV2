@@ -1,7 +1,7 @@
 .panel{
     min-height:100vh;
     background-color:lightcoral;
-    width:100vw;
+    max-width:100vw;
     padding-top:20vh;
     overflow:hidden;
 }
