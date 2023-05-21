@@ -10,6 +10,7 @@
     color: white;
     font-family: 'Bebas Neue', sans-serif;
     margin-bottom:2rem;
+    user-select: none;
 }
 
 .projectsHolder {
@@ -20,6 +21,14 @@
     padding-left:2.5%;
     gap:10px;
 }
+
+.projectsHolder img{
+    width:45vw;
+    height:23.5vw;
+    border-radius: 7px;
+}
+
+
 
 .project {
     width: 45.1vw;
