@@ -7,33 +7,39 @@ import yelpcamp from './stylesheets/images/yelpcampNEW.jpg'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 
+
 const ProjectSection = () => {
     const [showCleancards, setShowCleancards] = useState(true);
     const [showE2, setShowE2] = useState(true);
     const [showPWD, setShowPWD] = useState(true);
     const [showYelpcamp, setShowYelpcamp] = useState(true);
+    /* If set to true, only one project and its project description will be showing */
     const [showingProject, setShowingProject] = useState(false);
+
+    /* relocate used as an index for a transform animation in css module. */
     const [relocate, setRelocate] = useState(0);
     const [projDesc, setProjDesc] = useState('');
 
+    /* passed an index determined by which project is clicked on and sets projDesc to be displayed */
     const projDescSetter = (index) => {
         if (index == 0) {
             setProjDesc('A full stack flashcard web application in which users can create an account and make multiple decks of flashcards to study. The Front-end was made with React and was backend made with Express.js + MongoDB.')
         } else if (index == 2) {
             setProjDesc("A mock design firm website made in React.js to showcase my front-end skills. Backend made with Express.js. Animations made with framer-motion.")
         } else if (index == 3) {
-            setProjDesc('Full CRUD application with authentication, authorization, CORS, and cookie management. Frontend made with ejs and backend made with Express.js.')
-        } else if (index == 4) {
             setProjDesc('Personal web development blog which populates pages with posts I created and stored in mongoDB. Frontend made with EJS. Backend made with Express.js.')
+        } else if (index == 4) {
+            setProjDesc('Full CRUD application with authentication, authorization, CORS, and cookie management. Frontend made with ejs and backend made with Express.js.')
         }
-        return ''
     }
+
+    /* displays all projects, makes projDesc disappear */
     const displayProjects = () => {
         setShowCleancards(true); setShowE2(true); setShowPWD(true); setShowYelpcamp(true);
         setShowingProject(false); setRelocate(0);
         setProjDesc('');
     }
-
+    
     return (
         <div id="projectSection" className={styles.panel}>
             <div id="projectHeader" className={styles.projectHeader}>My Work</div>
@@ -45,6 +51,7 @@ const ProjectSection = () => {
                                 setShowE2(false); setShowPWD(false);
                                 setShowYelpcamp(false); setShowingProject(true);
                                 setRelocate(0); projDescSetter(0);
+                                window.location.replace("/#projectHeader")
                             }}>
                             <img src={cleancards} alt="Cleancards" />
                         </motion.div>

@@ -1,5 +1,4 @@
 import Hero from './Hero'
-import SecondSection from './SecondSection'
 import {motion} from 'framer-motion'
 import ProjectSection from './ProjectSection'
 import InfoSection from './InfoSection'
