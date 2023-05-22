@@ -6,7 +6,7 @@ const Hero = () => {
 
     const handleNav = (e) =>{
         e.preventDefault();
-        window.location.replace("/#secondSection")
+        window.location.replace("/#projectSection")
     }
     return (
 
