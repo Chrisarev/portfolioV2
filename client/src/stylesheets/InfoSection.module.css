@@ -18,28 +18,37 @@
 .infoSubSection{
     padding:0 10vw;
     display:flex;
-    gap:5vw;
+    gap:7vw;
     padding-bottom:10vh;
+    justify-content:center;
 }
 
 .infoSubSection h2{
     color:white;
     font-size: clamp(1rem, 1.5vw + 1.3rem, 4rem);
 }
-.infoSubSection:nth-of-type(1){
-    justify-content: flex-start;
-}
-.infoSubSection:nth-of-type(2){
-    justify-content: flex-end;
-}.infoSubSection:nth-of-type(2){
-    justify-content: flex-start;
-}
+
 .infoSubSection .imgHolder{
-    width: 35vw;
-    height:23vw;
+    min-width: 35vw;
+    min-height:23vw;
+    max-width:37vw;
+    min-height:25vw;
     display:block;
 }
 
 .imgHolder img{
-    width:100%;height:100%;
+    width:100%;
+    height:100%;
+    border-radius:7px; 
+}
+
+.topicHolder{
+    display:flex;
+    flex-direction: column;
+}
+
+.topicHolder li{
+    color:white;
+    font-size: clamp(1rem, 1vw + 1rem, 3rem);
+
 }
