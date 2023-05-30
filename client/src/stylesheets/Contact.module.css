@@ -66,6 +66,7 @@ a{
     align-items: center;
     transition:all 0.1s linear;
     border:2px solid white;
+    border-radius: 7px;
 }
 
 .infoHolder:hover{
@@ -99,6 +100,7 @@ a{
     justify-content: center;
     align-items: center;
     padding-bottom:5rem;
+        border-radius: 7px;
 }
 
 .contactForm h1{
@@ -173,12 +175,18 @@ a{
 
 @media(max-width:940px){
     .panel{
-        flex-direction: row;
+        flex-direction: column-reverse;
         justify-content: center;
     }
-    .infoSection{
-        display:none;
+    .contactInfo{
+        padding-bottom:10vh;
     }
+    .infoSection{
+        width:80%;
+        padding:1rem 0;
+        margin-left:10%;
+    }
+
     .formSection{
         width:100%;
     }
@@ -187,7 +195,9 @@ a{
         min-height:30rem;
         max-height:33rem;
         margin-top:1.5rem;
+        padding-bottom:0;
     }
+
     .inputGroup{
         padding-bottom:1rem;
     }

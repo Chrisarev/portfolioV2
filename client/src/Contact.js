@@ -17,7 +17,7 @@ const Contact = () => {
             <div className={styles.panelHeader}>Get in touch</div>
             <div className={styles.panel}>
                 <motion.div initial={{ opacity: 0, y: -200 }} animate={{ opacity: 1, y: 0, transition: { delay: 0.4 } }} className={styles.infoSection}>
-                    <h1 className={styles.infoHeader}>Let's create something <span>amazing!</span></h1>
+                    <h1 className={styles.infoHeader}><span>My Socials</span></h1>
                     <div className={styles.contactInfo}>
                         <Link to='https://github.com/Chrisarev'>
                         <div className={styles.infoHolder}>

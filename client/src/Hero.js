@@ -1,6 +1,7 @@
 import styles from './stylesheets/Hero.module.css'
 import motion from 'framer-motion'
 import AnimatedTextWord from './AnimatedTextWord'
+import portrait from './stylesheets/images/portrait.jpg'
 
 const Hero = () => {
 
@@ -14,6 +15,7 @@ const Hero = () => {
             <div className={styles.header}>Hello,</div>
             <div className={styles.header}>I'm <span>Christian Lizasuain.</span></div>
             <AnimatedTextWord text="I am a Full stack developer interested in responsive and fluid design." />
+            <img className={styles.portrait} src={portrait} alt="" />
             <div className={styles.circle} id="circle">
                 <svg className={styles.circleSVG} onClick={handleNav} version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300">
                     <defs>

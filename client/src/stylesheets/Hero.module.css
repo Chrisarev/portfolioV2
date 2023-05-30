@@ -60,7 +60,7 @@
 
 span {
     color: white;
-    font-size: clamp(1.5rem, 1.8vw + 1.5rem, 5rem);
+    font-size: clamp(1.5rem, 1.8vw + 1.3rem, 5rem);
     font-family: 'Bebas Neue', sans-serif;
     text-align: left;
     -webkit-user-select: none;
@@ -73,6 +73,14 @@ span {
     /* Standard */
     padding: 0 0.2rem;
     line-height: 1;
+}
+
+.portrait{
+    width:20rem;
+    position:absolute;
+    bottom:10vh;
+    left:10vw;
+    border-radius:7px;
 }
 
 .circle {
@@ -89,6 +97,7 @@ span {
     font-size: 16px;
     font-weight: bold;
     white-space: pre;
+    word-wrap:normal;
 }
 
 .circle svg {
@@ -124,6 +133,7 @@ span {
     user-select: none;
     /* Standard */
     cursor: pointer;
+    
 }
 
 @-webkit-keyframes rotate {
@@ -176,14 +186,25 @@ span {
     }
 }
 @media (max-width:940px){
+    .portrait{
+        width:12rem;
+        bottom:7vh;
+    }
     .circle{
         bottom:0;
     }
     .circle svg{
         width:30vh;
         height:30vh;
+        right:-5vw;
     }
     span{
         padding:0 0.1rem;
+    }
+}
+
+@media (max-width:750px){
+    .portrait{
+        width:8rem;
     }
 }
