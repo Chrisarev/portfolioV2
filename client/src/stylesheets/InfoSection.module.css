@@ -52,3 +52,31 @@
     font-size: clamp(1rem, 1vw + 1rem, 3rem);
 
 }
+
+@media(max-width:940px){
+    .infoSubSection{
+        flex-wrap:wrap;
+    }
+    .infoSubSection:nth-of-type(2){
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .imgHolder:nth-of-type(1){
+        margin-top:7vw;
+    }
+    .infoSubSection .imgHolder{
+       display:flex;
+       justify-content: center;
+       align-items: center;
+       overflow:hidden;
+       min-width:70vw;
+    }
+
+    .imgHolder img{
+        flex-shrink: 0;
+        min-width: 100%;
+        min-height: 100%
+    }
+    
+}

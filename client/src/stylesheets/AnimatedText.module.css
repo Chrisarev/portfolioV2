@@ -1,5 +1,13 @@
 .textHolder{
+    display:flex;
     flex-wrap:wrap;
     max-width:100vw;
     padding-left:15vh;
+}
+
+@media (max-width:940px){
+    .textHolder{
+        padding:0 1rem;
+        justify-content: center;
+    }
 }

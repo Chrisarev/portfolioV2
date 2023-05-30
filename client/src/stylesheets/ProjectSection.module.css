@@ -1,5 +1,5 @@
 .panel {
-    min-height: 100vh;
+    min-height: 80vh;
     background-color: rgb(19, 19, 19);
     padding-bottom: 20vh;
 }
@@ -65,7 +65,7 @@
     width: 45vw;
     min-height: 23.5vw;
     color: white;
-    font-size: clamp(1rem, 1.5vw + 1.3rem, 4rem);
+    font-size: clamp(1rem, 1.4vw + 1.3rem, 4rem);
     font-family: 'Bebas Neue', sans-serif;
     animation-delay: 0.5s;
 }
@@ -147,5 +147,27 @@ are removed*/
         /* height of one project image + 10px gap given by .projectsHolder*/
         /* width of one project image + 10px gap given by .projectsHolder*/
         transform: translate(calc(-45vw - 10px), calc(-23.5vw - 10px));
+    }
+}
+@media (max-width:940px){
+    .projectsHolder img {
+        width: 100%;
+        height: 100%;
+        border-radius: 7px;
+    }
+
+    .e2Holder[relocate='2'] {
+        animation: none;
+    }
+    
+    .pwdHolder[relocate='3'] {
+        animation:none;
+    }
+    
+    .yelpcampHolder[relocate='4'] {
+        animation: none;
+    }
+    .projectDesc{
+        width:90%;
     }
 }

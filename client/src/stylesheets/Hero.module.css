@@ -38,7 +38,6 @@
     animation-delay:0.3s;
 
 }
-
 @keyframes bgAni{
     from {
         color:white;
@@ -61,7 +60,7 @@
 
 span {
     color: white;
-    font-size: clamp(1.5rem, 2vw + 1.5rem, 5rem);
+    font-size: clamp(1.5rem, 1.8vw + 1.5rem, 5rem);
     font-family: 'Bebas Neue', sans-serif;
     text-align: left;
     -webkit-user-select: none;
@@ -174,5 +173,17 @@ span {
 
     to {
         transform: rotate(0);
+    }
+}
+@media (max-width:940px){
+    .circle{
+        bottom:0;
+    }
+    .circle svg{
+        width:30vh;
+        height:30vh;
+    }
+    span{
+        padding:0 0.1rem;
     }
 }
