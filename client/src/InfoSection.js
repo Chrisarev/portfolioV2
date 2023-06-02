@@ -23,9 +23,9 @@ const InfoSection = () => {
     const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0, 1, 1])
 
     const scale = useTransform(scrollYProgress, [0, 0.3, 1], [0.5, 1, 1])
-    const translateY = useTransform(scrollYProgress, [0, 0.5, 1], [300, 0, -300])
+    const translateY = useTransform(scrollYProgress, [0, 0.5, 1], [300, 0, -350])
     const translateY2 = useTransform(scrollYProgress, [0, 0.5, 1], [300, 0, -300])
-    const translateY3= useTransform(scrollYProgress, [0, 0.5, 1], [150, 0, -150])
+    const translateY3= useTransform(scrollYProgress, [0, 0.5, 1], [200, 0, -300])
     const scale2 = useTransform(scrollYProgress, [0, 0.3, 0.5, 1], [0.3, 0.8, 1, 1])
     const scale3 = useTransform(scrollYProgress, [0, 0.35, 0.7, 1], [0.3, 0.8, 1, 1])
 

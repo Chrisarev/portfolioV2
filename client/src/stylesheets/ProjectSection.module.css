@@ -156,18 +156,39 @@ are removed*/
         border-radius: 7px;
     }
 
-    .e2Holder[relocate='2'] {
-        animation: none;
-    }
-    
-    .pwdHolder[relocate='3'] {
-        animation:none;
-    }
-    
-    .yelpcampHolder[relocate='4'] {
-        animation: none;
-    }
     .projectDesc{
         width:90%;
     }
+
+    @keyframes relocateE2 {
+        from {
+            transform: translateY(0);
+        }
+    
+        to {
+            /* Height of 2 project images + 2 10px gaps given by projectHolder (extra 3 pixels to smooth
+            flexbox realignment */
+            transform: translateY(calc(-1 * (47vw + 23px)));
+        }
+    }
+    @keyframes relocatePWD {
+        from {
+            transform: translateY(0);
+        }
+    
+        to {
+            transform: translateY(calc(-1 * (94vw + 53px)));
+        }
+    }
+    
+@keyframes relocateYelpcamp {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(calc(-1 * (141vw + 90px)));
+    }
+}
+    
 }
