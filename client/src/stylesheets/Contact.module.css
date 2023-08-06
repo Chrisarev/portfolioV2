@@ -7,6 +7,7 @@
 }
 .panelHeader {
     padding:0;
+    font-size: calc(2em + 3vmin);
     font-size: clamp(2rem, 5vw + 1.5rem, 8rem);
     color: white;
     background-color: rgb(19, 19, 19);
@@ -25,6 +26,7 @@
 
 .infoSection h1{
     padding-top:3rem;
+    font-size: calc(2em + 3vmin);
     font-size: clamp(2rem, 1.5vw + 0.8rem, 7rem);
     color:white;
     font-family:'K2D', sans-serif;
@@ -48,10 +50,14 @@
         background-position: var(--bg-size) 0;
     }
 }
+
+.contactInfo .infoHolder{
+    margin-bottom:1rem;
+}
+
 .contactInfo{
     display:flex;
     flex-direction: column;
-    gap:2rem;
 }
 
 a{
@@ -100,7 +106,7 @@ a{
     justify-content: center;
     align-items: center;
     padding-bottom:5rem;
-        border-radius: 7px;
+    border-radius: 7px;
 }
 
 .contactForm h1{
@@ -119,15 +125,18 @@ a{
 .contactForm form label{
     text-align: left;
     padding-left:1rem;
+    font-size: calc(1em + 1vmin);
     font-size: clamp(1.2rem, 1vw + 0.5rem, 5rem);
     font-weight: 500;
 }
 .contactForm input{
     height:2rem;
+    font-size: calc(1em + 1vmin);
     font-size: clamp(1.2rem, 1vw + 0.5rem, 5rem);
 }
 .contactForm textarea{
     resize:none;
+    font-size: calc(1em + 1vmin);
     font-size: clamp(1rem, 0.9vw + 0.5rem, 4rem);
 }
 
@@ -147,6 +156,7 @@ a{
 .contactForm button{
     min-width:12rem;
     padding:0.8rem;
+    font-size: calc(1em + 1vmin);
     font-size: clamp(1.2rem, 1vw + 0.5rem, 5rem);
     --bg-size: 400%;
     background-image: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
@@ -162,6 +172,7 @@ a{
 .submitMessage{
     color:black;
     font-family:'K2D', sans-serif;
+    font-size: calc(1em + 1vmin);
     font-size:clamp(1.5rem, 1.2vw + 0.5rem, 5rem);
     padding-top:1rem;
     width:80%;

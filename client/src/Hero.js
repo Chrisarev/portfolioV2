@@ -25,7 +25,7 @@ const Hero = () => {
                     <g>
                         <use href="#circlePath" fill="none" />
                         <text fill="#FFF">
-                            <textPath href="#circlePath">See my previous work!   See my previous work!</textPath>
+                            <textPath href="#circlePath">See my previous work! &#160; See my previous work!</textPath>
                         </text>
                     </g>
                 </svg>
