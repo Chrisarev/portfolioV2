@@ -177,7 +177,7 @@ const ProjectSection = () => {
                                 <button className={styles.projectNavButton} onClick={displayProjects}>All Projects</button>
                             </div>
                         </motion.div>
-                    }
+                    }1
                 </AnimatePresence>
             </div>
         </div>
