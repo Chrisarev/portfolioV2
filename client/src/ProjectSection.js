@@ -61,16 +61,34 @@ const ProjectSection = () => {
         <div id="projectSection" className={styles.panel}>
             <div id="projectHeader" className={styles.projectHeader}>My Work</div>
             <div className={styles.projectsHolder}>
+            <AnimatePresence>
+                    {showRedd &&
+                        <motion.div className={styles.reddHolder} initial={{ opacity: 1 }} exit={{ opacity: 0 }}
+                            onClick={() => {
+                                setShowCleancards(false); setShowE2(false);
+                                setShowPWD(false); setShowYelpcamp(false); 
+                                setShowSpacer(false); setShowingProject(true);
+                                setRelocate(1); projDescSetter(5);
+                                window.location.replace("/#projectHeader")
+                            }}
+                            onAnimationEnd={() => setRelocate(0)}
+                            relocate={relocate}>
+                            <img src={redd} alt="" />
+                        </motion.div>
+                    }
+                </AnimatePresence>
                 <AnimatePresence>
                     {showCleancards &&
-                        <motion.div initial={{ opacity: 1 }} exit={{ opacity: 0 }}
+                        <motion.div className={styles.cleancardsHolder}  initial={{ opacity: 1 }} exit={{ opacity: 0 }}
                             onClick={() => {
                                 setShowE2(false); setShowPWD(false);
                                 setShowYelpcamp(false); setShowRedd(false); 
                                 setShowSpacer(false); setShowingProject(true);
-                                setRelocate(0); projDescSetter(0);
+                                setRelocate(2); projDescSetter(0);
                                 window.location.replace("/#projectHeader")
-                            }}>
+                            }}
+                            onAnimationEnd={() => setRelocate(0)}
+                            relocate={relocate}>
                             <img src={cleancards} alt="Cleancards" />
                         </motion.div>
                     }
@@ -82,7 +100,7 @@ const ProjectSection = () => {
                                 setShowCleancards(false); setShowPWD(false);
                                 setShowYelpcamp(false); setShowRedd(false); 
                                 setShowSpacer(false); setShowingProject(true);
-                                setRelocate(2); projDescSetter(2);
+                                setRelocate(3); projDescSetter(2);
                                 window.location.replace("/#projectHeader")
                             }}
                             onAnimationEnd={() => setRelocate(0)}
@@ -98,7 +116,7 @@ const ProjectSection = () => {
                                 setShowCleancards(false); setShowE2(false);
                                 setShowYelpcamp(false); setShowRedd(false); 
                                 setShowSpacer(false); setShowingProject(true);
-                                setRelocate(3); projDescSetter(3);
+                                setRelocate(4); projDescSetter(3);
                                 window.location.replace("/#projectHeader")
                             }}
                             onAnimationEnd={() => setRelocate(0)}
@@ -114,28 +132,12 @@ const ProjectSection = () => {
                                 setShowCleancards(false); setShowE2(false);
                                 setShowPWD(false); setShowRedd(false); 
                                 setShowSpacer(false); setShowingProject(true);
-                                setRelocate(4); projDescSetter(4);
+                                setRelocate(5); projDescSetter(4);
                                 window.location.replace("/#projectHeader")
                             }}
                             onAnimationEnd={() => setRelocate(0)}
                             relocate={relocate}>
                             <img src={yelpcamp} alt="" />
-                        </motion.div>
-                    }
-                </AnimatePresence>
-                <AnimatePresence>
-                    {showRedd &&
-                        <motion.div className={styles.reddHolder} initial={{ opacity: 1 }} exit={{ opacity: 0 }}
-                            onClick={() => {
-                                setShowCleancards(false); setShowE2(false);
-                                setShowPWD(false); setShowYelpcamp(false); 
-                                setShowSpacer(false); setShowingProject(true);
-                                setRelocate(5); projDescSetter(5);
-                                window.location.replace("/#projectHeader")
-                            }}
-                            onAnimationEnd={() => setRelocate(0)}
-                            relocate={relocate}>
-                            <img src={redd} alt="" />
                         </motion.div>
                     }
                 </AnimatePresence>

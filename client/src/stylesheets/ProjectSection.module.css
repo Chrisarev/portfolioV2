@@ -28,7 +28,7 @@
     width: 45vw;
     height: 23.5vw;
     border-radius: 7px;
-    margin:5px;
+    margin: 5px;
 }
 
 .projectsHolder img:hover {
@@ -43,7 +43,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .project:nth-of-type(1) {
@@ -70,7 +70,7 @@
     width: 45vw;
     min-height: 23.5vw;
     color: white;
-    font-size:calc(1em + 1vmin);
+    font-size: calc(1em + 1vmin);
     font-size: clamp(1rem, 1.4vw + 1.3rem, 4rem);
     font-family: 'Bebas Neue', sans-serif;
     animation-delay: 0.5s;
@@ -110,24 +110,26 @@
     cursor: pointer;
 }
 
-.e2Holder[relocate='2'] {
+.cleancardsHolder[relocate='2'] {
+    animation: relocateCleancards 0.3s forwards;
+}
+
+.e2Holder[relocate='3'] {
     animation: relocateE2 0.3s forwards;
 }
 
-.pwdHolder[relocate='3'] {
+.pwdHolder[relocate='4'] {
     animation: relocatePWD 0.3s forwards;
 }
 
-.yelpcampHolder[relocate='4'] {
+.yelpcampHolder[relocate='5'] {
     animation: relocateYelpcamp 0.3s forwards;
 }
-.reddHolder[relocate='5'] {
-    animation: relocateRedd 0.3s forwards; 
-}
+
 
 /* Project images need to be animated to new position because flexbox rearranges layout when other images
 are removed*/
-@keyframes relocateE2 {
+@keyframes relocateCleancards {
     from {
         transform: translateX(0);
     }
@@ -138,7 +140,7 @@ are removed*/
     }
 }
 
-@keyframes relocatePWD {
+@keyframes relocateE2 {
     from {
         transform: translateY(0);
     }
@@ -149,7 +151,7 @@ are removed*/
     }
 }
 
-@keyframes relocateYelpcamp {
+@keyframes relocatePWD {
     from {
         transform: translateY(0);
         transform: translateX(0);
@@ -162,67 +164,80 @@ are removed*/
     }
 }
 
-@keyframes relocateRedd  {
-    from {
-        transform: translateY(0);
-        transform: translateX(0);
-    }
-    to {
-        transform: translateY(calc(-48.5vw - 10px))
-    }
-}
-
-@media (max-width:940px){
-    .projectsHolder div{
-        margin-bottom:5px;
-    }
-    .projectsHolder img {
-        width: 100%;
-        height: 100%;
-        border-radius: 7px;
-    }
-
-    .projectDesc{
-        width:90%;
-    }
-
-    @keyframes relocateE2 {
-        from {
-            transform: translateY(0);
-        }
-    
-        to {
-            /* Height of 2 project images + 2 10px gaps given by projectHolder */
-            transform: translateY(calc(-1 * (47vw + 26px)));
-        }
-    }
-    @keyframes relocatePWD {
-        from {
-            transform: translateY(0);
-        }
-    
-        to {
-            transform: translateY(calc(-1 * (94vw + 62px)));
-        }
-    }
-    
 @keyframes relocateYelpcamp {
     from {
         transform: translateY(0);
     }
 
     to {
-        transform: translateY(calc(-1 * (141vw + 105px)));
+        /* height of one project image + 10px gap given by .projectsHolder*/
+        transform: translateY(calc(-48.5vw - 10px));
     }
 }
-@keyframes relocateRedd  {
-    from {
-        transform: translateY(0);
-        transform: translateX(0);
+
+
+
+
+@media (max-width:940px) {
+    .projectsHolder div {
+        margin-bottom: 5px;
     }
-    to {
-        transform: translateY(calc(-1* (215.5vw + 30px)))
+
+    .projectsHolder img {
+        width: 100%;
+        height: 100%;
+        border-radius: 7px;
     }
-}
-    
+
+    .projectDesc {
+        width: 90%;
+    }
+
+    @keyframes relocateCleancards {
+        from {
+            transform: translateY(0);
+        } to {
+            transform: translateY(calc(-1 * (47vw + 26px)));
+        }
+    }
+
+    @keyframes relocateE2 {
+        from {
+            transform: translateY(0);
+        } to {
+            /* Height of 2 project images + 2 10px gaps given by projectHolder */
+            transform: translateY(calc(-1 * (94vw + 62px)));
+        }
+    }
+
+    @keyframes relocatePWD {
+        from {
+            transform: translateY(0);
+        }
+
+        to {
+            transform: translateY(calc(-1 * (141vw + 105px)));
+        }
+    }
+
+    @keyframes relocateYelpcamp {
+        from {
+            transform: translateY(0);
+        }
+
+        to {
+            transform: translateY(calc(-1 * (195vw + 105px)));
+        }
+    }
+
+    @keyframes relocateRedd {
+        from {
+            transform: translateY(0);
+        }
+
+        to {
+            transform: translateY(0); 
+        }
+    }
+
 }
