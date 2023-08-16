@@ -1,11 +1,10 @@
 import styles from './stylesheets/Hero.module.css'
-import motion from 'framer-motion'
 import AnimatedTextWord from './AnimatedTextWord'
 import portrait from './stylesheets/images/portrait.jpg'
 
 const Hero = () => {
 
-    const handleNav = (e) =>{
+    const handleNav = (e) => {
         e.preventDefault();
         window.location.replace("/#projectSection")
     }

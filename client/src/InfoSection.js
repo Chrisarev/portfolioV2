@@ -1,9 +1,9 @@
 import { useScroll, useTransform, motion } from 'framer-motion'
 import styles from './stylesheets/InfoSection.module.css'
 import { useRef } from 'react'
-import accessibilityIMG from './stylesheets/images/ben-kolde-compressed.webp'
-import maintainIMG from './stylesheets/images/maintain.webp'
-import uiuxIMG from './stylesheets/images/uxCompress.webp'
+import accessibilityIMG from './stylesheets/images/ben-kolde-compressed.jpg'
+import maintainIMG from './stylesheets/images/maintain.jpg'
+import uiuxIMG from './stylesheets/images/uxCompress.jpg'
 
 const InfoSection = () => {
     //Need the useRef hook to get position of parent element 
@@ -67,7 +67,7 @@ const InfoSection = () => {
                             <li>Ensuring adding many new features is feasible</li>
                         </ul>
                     </motion.div>
-                    <motion.div className={styles.imgHolder} style={{ translateY, scale: scale3 }}>
+                    <motion.div className={styles.imgHolder} style={{ translateY: translateY2, scale: scale3 }}>
                         <img src={maintainIMG} alt="" />
                     </motion.div>
                 </div>
