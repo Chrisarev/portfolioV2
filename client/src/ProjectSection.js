@@ -1,10 +1,10 @@
 import styles from './stylesheets/ProjectSection.module.css'
 import { motion, AnimatePresence } from 'framer-motion'
-import cleancards from './stylesheets/images/cleancardsIMG.png'
-import e2 from './stylesheets/images/designe2IMG.png'
-import purewebdev from './stylesheets/images/purewebdevIMG.jpg'
-import yelpcamp from './stylesheets/images/yelpcampNEW.jpg'
-import redd from './stylesheets/images/redd.jpg'
+import cleancards from './stylesheets/images/cleancardsIMG.webp'
+import e2 from './stylesheets/images/designe2IMG.webp'
+import purewebdev from './stylesheets/images/purewebdevIMG.webp'
+import yelpcamp from './stylesheets/images/yelpcampNEW.webp'
+import redd from './stylesheets/images/redd.webp'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 
@@ -54,7 +54,8 @@ const ProjectSection = () => {
     const displayProjects = () => {
         setShowCleancards(true); setShowE2(true); setShowPWD(true); setShowYelpcamp(true);
         setShowRedd(true); setShowSpacer(true); setShowingProject(false); setRelocate(0);
-        setProjDesc('');
+        setProjDesc(''); window.location.replace("/#projectHeader");
+
     }
 
     return (
@@ -63,7 +64,7 @@ const ProjectSection = () => {
             <div className={styles.projectsHolder}>
             <AnimatePresence>
                     {showRedd &&
-                        <motion.div className={styles.reddHolder} initial={{ opacity: 1 }} exit={{ opacity: 0 }}
+                        <motion.div className={styles.reddHolder} animate={{opacity: 1}} initial={{ opacity: 0 }} exit={{ opacity: 0 }}
                             onClick={() => {
                                 setShowCleancards(false); setShowE2(false);
                                 setShowPWD(false); setShowYelpcamp(false); 
@@ -79,7 +80,7 @@ const ProjectSection = () => {
                 </AnimatePresence>
                 <AnimatePresence>
                     {showCleancards &&
-                        <motion.div className={styles.cleancardsHolder}  initial={{ opacity: 1 }} exit={{ opacity: 0 }}
+                        <motion.div className={styles.cleancardsHolder}  animate={{opacity: 1}} initial={{ opacity: 0 }} exit={{ opacity: 0 }}
                             onClick={() => {
                                 setShowE2(false); setShowPWD(false);
                                 setShowYelpcamp(false); setShowRedd(false); 
@@ -95,7 +96,7 @@ const ProjectSection = () => {
                 </AnimatePresence>
                 <AnimatePresence>
                     {showE2 &&
-                        <motion.div className={styles.e2Holder} initial={{ opacity: 1 }} exit={{ opacity: 0 }}
+                        <motion.div className={styles.e2Holder} animate={{opacity: 1}} initial={{ opacity: 0 }} exit={{ opacity: 0 }}
                             onClick={() => {
                                 setShowCleancards(false); setShowPWD(false);
                                 setShowYelpcamp(false); setShowRedd(false); 
@@ -111,7 +112,7 @@ const ProjectSection = () => {
                 </AnimatePresence>
                 <AnimatePresence>
                     {showPWD &&
-                        <motion.div className={styles.pwdHolder} initial={{ opacity: 1 }} exit={{ opacity: 0 }}
+                        <motion.div className={styles.pwdHolder} animate={{opacity: 1}} initial={{ opacity: 0 }} exit={{ opacity: 0 }}
                             onClick={() => {
                                 setShowCleancards(false); setShowE2(false);
                                 setShowYelpcamp(false); setShowRedd(false); 
@@ -127,7 +128,7 @@ const ProjectSection = () => {
                 </AnimatePresence>
                 <AnimatePresence>
                     {showYelpcamp &&
-                        <motion.div className={styles.yelpcampHolder} initial={{ opacity: 1 }} exit={{ opacity: 0 }}
+                        <motion.div className={styles.yelpcampHolder} animate={{opacity: 1}} initial={{ opacity: 0 }} exit={{ opacity: 0 }}
                             onClick={() => {
                                 setShowCleancards(false); setShowE2(false);
                                 setShowPWD(false); setShowRedd(false); 

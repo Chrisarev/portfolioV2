@@ -55,6 +55,9 @@
 }
 
 @media(max-width:940px){
+    .panelHeader{
+        padding-bottom:0;
+    }
     .infoSubSection{
         flex-wrap:wrap;
     }

@@ -30,7 +30,11 @@
     border-radius: 7px;
     margin: 5px;
 }
-
+.projectHolder .holder{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
 .projectsHolder img:hover {
     cursor: pointer;
 }
@@ -67,6 +71,7 @@
 
 .projectDesc {
     padding-top: 1rem;
+    margin: 5px;
     width: 45vw;
     min-height: 23.5vw;
     color: white;
@@ -179,6 +184,9 @@ are removed*/
 
 
 @media (max-width:940px) {
+    .projectsHolder{
+        padding-left:1.25%;
+    }
     .projectsHolder div {
         margin-bottom: 5px;
     }

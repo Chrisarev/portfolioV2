@@ -1,10 +1,9 @@
-
 import { useScroll, useTransform, motion } from 'framer-motion'
 import styles from './stylesheets/InfoSection.module.css'
 import { useRef } from 'react'
-import accessibilityIMG from './stylesheets/images/ben-kolde-compressed.png'
-import maintainIMG from './stylesheets/images/maintain.png'
-import uiuxIMG from './stylesheets/images/uxCompress.jpg'
+import accessibilityIMG from './stylesheets/images/ben-kolde-compressed.webp'
+import maintainIMG from './stylesheets/images/maintain.webp'
+import uiuxIMG from './stylesheets/images/uxCompress.webp'
 
 const InfoSection = () => {
     //Need the useRef hook to get position of parent element 
