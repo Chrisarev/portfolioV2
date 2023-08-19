@@ -38,6 +38,7 @@
     animation:bgAni 0.15s linear forwards;
     animation-delay:0.3s;
 }
+
 @keyframes bgAni{
     from {
         color:white;
@@ -75,18 +76,25 @@ span {
     line-height: 1;
 }
 
+.container{
+    max-height:50vh;
+    display:flex;
+    max-width:100%;
+    padding:0 0 0 5vw;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
 .portrait{
-    width:20rem;
-    position:absolute;
-    bottom:10vh;
-    left:10vw;
+    display:block;
+    max-width:20rem;
+    max-height:30rem;
+    width:auto;
+    height:auto;
     border-radius:7px;
 }
 
 .circle {
-    position: absolute;
-    bottom: 2rem;
-    width: 100%;
     display: flex;
     justify-content: flex-end;
     overflow: hidden;
@@ -103,7 +111,6 @@ span {
 }
 
 .circle svg {
-    position: relative;
     width: 40rem;
     height: 40rem;
     -webkit-animation-name: rotate;
@@ -189,6 +196,22 @@ span {
         transform: rotate(0);
     }
 }
+
+@media(max-height:800px) and (min-width:1000px){
+    .container{
+        justify-content: space-between;
+        padding:0 8vw;
+    }
+    .portrait{
+        margin-left:4rem;
+        max-width:15rem;
+        max-height:20rem;
+    }
+    .circle svg{
+        height:25rem;
+        width:25rem;
+    }
+}
 @media (max-width:940px){
     .header:nth-of-type(1) {
         padding-top: 5vh;
@@ -200,18 +223,23 @@ span {
         animation-delay: 0.15s;
         margin-bottom:2rem;
     }
-
-    .portrait{
-        width:12rem;
-        bottom:7vh;
+    .container{
+        justify-content: space-around;
     }
+    .portrait{
+        max-width:12rem;
+        max-height:18rem;
+        /*bottom:7vh;*/
+    }
+    /*
     .circle{
         bottom:0;
     }
+    */
     .circle svg{
-        width:30vh;
-        height:30vh;
-        right:-5vw;
+        width:15rem;
+        height:15rem;
+        /*right:-5vw;*/
     }
     span{
         padding:0 0.1rem;
@@ -220,6 +248,7 @@ span {
 
 @media (max-width:750px){
     .portrait{
-        width:8rem;
+        max-width:8rem;
+        max-height:12rem;
     }
 }

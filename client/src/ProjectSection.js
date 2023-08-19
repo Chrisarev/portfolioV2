@@ -4,7 +4,7 @@ import cleancards from './stylesheets/images/cleancardsIMG.png'
 import e2 from './stylesheets/images/designe2IMG.png'
 import purewebdev from './stylesheets/images/purewebdevIMG.jpg'
 import yelpcamp from './stylesheets/images/yelpcampNEW.jpg'
-import redd from './stylesheets/images/redd.webp'
+import redd from './stylesheets/images/redd.jpg'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 
