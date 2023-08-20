@@ -6,7 +6,7 @@ Portfolio made to showcase my website development skills as well as past project
 
 Technology
 --------------------------------
-Front-end created using React + Vite. Back-end created with Express. 
+Front-end created using React. Back-end created with Express. 
 
 License
 --------------------------------
