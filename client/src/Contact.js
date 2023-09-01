@@ -14,7 +14,7 @@ const Contact = () => {
 
     return (
         <>
-            <div className={styles.panelHeader}>Get in touch</div>
+            <div id="contactHeader" className={styles.panelHeader}>Get in touch</div>
             <div className={styles.panel}>
                 <motion.div initial={{ opacity: 0, y: -200 }} animate={{ opacity: 1, y: 0, transition: { delay: 0.4 } }} className={styles.infoSection}>
                     <h1 className={styles.infoHeader}><span>My Socials</span></h1>

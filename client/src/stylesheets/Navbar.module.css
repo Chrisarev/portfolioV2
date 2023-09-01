@@ -1,0 +1,39 @@
+.navbar{
+    position:absolute;
+    max-width:100vw;
+    width:100%;
+    top:0;
+    height:5rem;
+    display:flex;
+    align-items: center ;
+    justify-content: flex-end;
+}
+
+.links ul{
+    display:flex;
+    margin-right:5rem;
+}
+
+.links ul li{
+    font-family: 'Bebas Neue', sans-serif;
+    list-style-type: none;
+    color:white;
+    font-size: clamp(1rem, 1vw + 1rem, 2rem);
+    margin-right:2rem;
+}
+
+.links{
+    opacity:0;
+    animation: navAni 0.4s linear forwards; 
+    animation-delay: 1s;
+}
+
+@keyframes navAni{
+    from{
+        opacity:0;
+        transform:translateY(-30px);
+    }to{
+        opacity:1;
+        transform:translateY(0); 
+    }
+}
