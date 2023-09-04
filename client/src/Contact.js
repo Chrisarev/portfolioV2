@@ -10,27 +10,28 @@ const Contact = () => {
     const [phone, setPhone] = useState('');
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('');
-    const [isPending, setIsPending] = useState(false); 
+    const [isPending, setIsPending] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const comment = {name,phone,email, message};
+        const comment = { name, phone, email, message };
         setIsPending(true);
         fetch('/api/postComment', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(comment)
         }).then((response) => {
-            if(response.status==500){
+            if (response.status == 500) {
                 setIsPending(false);
-                setSubmitState(false); 
-                return response; 
+                setSubmitState(false);
+                return response;
             }
-            return response.json(); 
-        }).then((data) =>{
-            setIsPending(false);
-            setButtonText('Submitted ✓')
-            setSubmitState(true)
+            if (response.status == 200 || 204 || 304) {
+                setIsPending(false);
+                setButtonText('Submitted ✓');
+                setSubmitState(true);
+                return response;
+            }
         })
     }
 
