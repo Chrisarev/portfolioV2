@@ -11,7 +11,7 @@ const Hero2 = () => {
         window.location.replace("/#projectSection")
     }
     const handleMouseOver = (e) =>{
-
+        
     }
 
     return (
