@@ -25,22 +25,18 @@ db.once("open", () => {
 const app = express();
 app.use(express.json({limit:"50mb"}))
 
-/*** HTTP -> HTTPS IN ORDER TO USE SSL CERTIFICATE ***/
-app.use((req, res, next) => {
-    if (req.header('x-forwarded-proto') !== 'https') {
-      res.redirect(`https://${req.header('host')}${req.url}`)
-    } else {
-      next();
-    }
-});
-
 app.use(express.static(path.join(__dirname + '/public')))
 app.use(express.urlencoded({ extended: true })) ///allows us to get req.params 
 app.use(mongoSanitize()) ///prevents users from inputting characters that could result in mongo injection
 
-app.get('*', (req,res) =>{
-    res.sendFile(path.join(__dirname+ '/public/index.html'))
-})
+/*** HTTP -> HTTPS IN ORDER TO USE SSL CERTIFICATE ***/
+app.use((req, res, next) => {
+  if (req.header('x-forwarded-proto') !== 'https') {
+    res.redirect(`https://${req.header('host')}${req.url}`)
+  } else {
+    next();
+  }
+});
 
 app.post('/api/postComment', async (req,res) =>{
   try{
@@ -51,6 +47,10 @@ app.post('/api/postComment', async (req,res) =>{
     console.log('Failed to submit comment')
     res.sendStatus(500); 
   }
+})
+
+app.get('*', (req,res) =>{
+  res.sendFile(path.join(__dirname+ '/public/index.html'))
 })
 
 const PORT = process.env.PORT || 3000;
