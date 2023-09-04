@@ -42,6 +42,7 @@ app.post('/api/postComment', async (req,res) =>{
     const {name,phone,email,message} = req.body; 
     const comment = new Comment({name,phone,email,message});
     await comment.save(); 
+    res.sendStatus(204);
   } catch (e){
     console.log('Failed to submit comment')
     res.sendStatus(500); 
