@@ -76,8 +76,8 @@
     min-height: 23.5vw;
     color: white;
     font-size: calc(1em + 1vmin);
-    font-size: clamp(1rem, 1.4vw + 1.3rem, 4rem);
-    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(1rem, 1vw + 0.8rem, 4rem);
+    font-family: 'Poppins', sans-serif;
     animation-delay: 0.5s;
 }
 
@@ -199,6 +199,7 @@ are removed*/
 
     .projectDesc {
         width: 90%;
+        font-size: clamp(1rem, 0.8vw + 0.8rem, 4rem);
     }
 
     @keyframes relocateCleancards {

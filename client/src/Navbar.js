@@ -14,7 +14,7 @@ const Navbar = () =>{
                 <ul>
                     <Link onClick={(e) =>{e.preventDefault(); window.location.replace("/#projectSection")}}><li>My Work</li></Link>
                     <Link onClick={(e) =>{e.preventDefault(); window.location.replace("/#contactHeader")}}><li>Contact Me</li></Link>
-                    <Link to="https://www.google.com/"><li>Resume</li></Link>
+                    <Link to="https://docs.google.com/document/d/1Ac2wwfNmb3JdmNhYKNB8-YeR32glgXnYRrt0NCKsBqM/edit?usp=sharing"><li>Resume</li></Link>
                 </ul>
             </div>
         </div>

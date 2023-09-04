@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.dd023db6.css",
-    "main.js": "/static/js/main.c5f3059c.js",
+    "main.css": "/static/css/main.7b280d8f.css",
+    "main.js": "/static/js/main.a23831f2.js",
     "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
     "static/media/redd.jpg": "/static/media/redd.3ba0a10512c3670f38f5.jpg",
     "static/media/yelpcampNEW.jpg": "/static/media/yelpcampNEW.1b62152e41ea79a22b74.jpg",
@@ -13,12 +13,12 @@
     "static/media/designe2IMG.png": "/static/media/designe2IMG.889ac3d21a079f06f2c9.png",
     "static/media/maintain.jpg": "/static/media/maintain.702da5eddc7be742cec4.jpg",
     "index.html": "/index.html",
-    "main.dd023db6.css.map": "/static/css/main.dd023db6.css.map",
-    "main.c5f3059c.js.map": "/static/js/main.c5f3059c.js.map",
+    "main.7b280d8f.css.map": "/static/css/main.7b280d8f.css.map",
+    "main.a23831f2.js.map": "/static/js/main.a23831f2.js.map",
     "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dd023db6.css",
-    "static/js/main.c5f3059c.js"
+    "static/css/main.7b280d8f.css",
+    "static/js/main.a23831f2.js"
   ]
 }

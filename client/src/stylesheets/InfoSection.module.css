@@ -50,7 +50,8 @@
 
 .topicHolder li{
     color:white;
-    font-size: clamp(1rem, 1vw + 1rem, 3rem);
+    font-size: clamp(1rem, 1vw + 0.8rem, 3rem);
+    font-family: 'Poppins', sans-serif;
 
 }
 
