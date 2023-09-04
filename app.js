@@ -1,6 +1,5 @@
-if (process.env.NODE_ENV !== "production") {
-    require('dotenv').config();
-} ///environment variable that is either in dev or production mode
+const dotenv = require("dotenv");
+dotenv.config();
 
 const express = require('express');
 const path = require('path');
