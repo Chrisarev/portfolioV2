@@ -115,16 +115,16 @@
     cursor: pointer;
 }
 
-.cleancardsHolder[relocate='2'] {
+.reddHolder[relocate='2'] {
+    animation: relocateRedd 0.3s forwards;
+}
+
+.cleancardsHolder[relocate='3'] {
     animation: relocateCleancards 0.3s forwards;
 }
 
-.e2Holder[relocate='3'] {
+.e2Holder[relocate='4'] {
     animation: relocateE2 0.3s forwards;
-}
-
-.pwdHolder[relocate='4'] {
-    animation: relocatePWD 0.3s forwards;
 }
 
 .yelpcampHolder[relocate='5'] {
@@ -134,7 +134,7 @@
 
 /* Project images need to be animated to new position because flexbox rearranges layout when other images
 are removed*/
-@keyframes relocateCleancards {
+@keyframes relocateRedd {
     from {
         transform: translateX(0);
     }
@@ -145,7 +145,7 @@ are removed*/
     }
 }
 
-@keyframes relocateE2 {
+@keyframes relocateCleancards {
     from {
         transform: translateY(0);
     }
@@ -156,7 +156,7 @@ are removed*/
     }
 }
 
-@keyframes relocatePWD {
+@keyframes relocateE2 {
     from {
         transform: translateY(0);
         transform: translateX(0);
@@ -202,7 +202,7 @@ are removed*/
         font-size: clamp(1rem, 0.8vw + 0.8rem, 4rem);
     }
 
-    @keyframes relocateCleancards {
+    @keyframes relocateRedd {
         from {
             transform: translateY(0);
         } to {
@@ -210,7 +210,7 @@ are removed*/
         }
     }
 
-    @keyframes relocateE2 {
+    @keyframes relocateCleancards {
         from {
             transform: translateY(0);
         } to {
@@ -219,7 +219,7 @@ are removed*/
         }
     }
 
-    @keyframes relocatePWD {
+    @keyframes relocateE2{
         from {
             transform: translateY(0);
         }

@@ -7,21 +7,23 @@ import yelpcamp from './stylesheets/images/yelpcampNEW.jpg'
 import redd from './stylesheets/images/redd.jpg'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
-
+import nuvo from './stylesheets/images/nuvoSS.png'
 
 const ProjectSection = () => {
     const [showCleancards, setShowCleancards] = useState(true);
     const [showE2, setShowE2] = useState(true);
-    const [showPWD, setShowPWD] = useState(true);
+    const [showNuvo, setShowNuvo] = useState(true);
     const [showYelpcamp, setShowYelpcamp] = useState(true);
     const [showRedd, setShowRedd] = useState(true);
     const [showSpacer, setShowSpacer] = useState(true);
+
     /* If set to true, only one project and its project description will be showing */
     const [showingProject, setShowingProject] = useState(false);
+
     /* relocate used as an index for a transform animation in css module. */
     const [relocate, setRelocate] = useState(0);
-    const [projDesc, setProjDesc] = useState('');
 
+    const [projDesc, setProjDesc] = useState('');
     const [projectLink, setProjectLink] = useState('');
     const [gitProjLink, setGitProjLink] = useState('')
 
@@ -36,8 +38,8 @@ const ProjectSection = () => {
             setProjectLink('https://experiencedesign.herokuapp.com/')
             setGitProjLink('https://github.com/Chrisarev/designreact')
         } else if (index == 3) {
-            setProjDesc('Personal web development blog which populates pages with posts I created and stored in mongoDB. Frontend made with EJS. Backend made with Express.js.')
-            setProjectLink('https://purewebdev.herokuapp.com/')
+            setProjDesc('A mock design firm website featuring 3D graphics/animations. Front-end made with React.js. Backend made with Express.js.')
+            setProjectLink('https://nuvo-023bc52f380c.herokuapp.com/')
             setGitProjLink('https://github.com/Chrisarev/purewebdev')
         } else if (index == 4) {
             setProjDesc('Full CRUD application with authentication, authorization, CORS, and cookie management. Frontend made with ejs and backend made with Express.js.')
@@ -52,40 +54,55 @@ const ProjectSection = () => {
 
     /* displays all projects, makes projDesc disappear */
     const displayProjects = () => {
-        setShowCleancards(true); setShowE2(true); setShowPWD(true); setShowYelpcamp(true);
+        setShowCleancards(true); setShowE2(true); setShowNuvo(true); setShowYelpcamp(true);
         setShowRedd(true); setShowSpacer(true); setShowingProject(false); setRelocate(0);
         setProjDesc(''); window.location.replace("/#projectHeader");
-
     }
 
     return (
         <div id="projectSection" className={styles.panel}>
             <div id="projectHeader" className={styles.projectHeader}>My Work</div>
             <div className={styles.projectsHolder}>
-            <AnimatePresence>
-                    {showRedd &&
-                        <motion.div className={styles.reddHolder} animate={{opacity: 1}} initial={{ opacity: 0 }} exit={{ opacity: 0 }}
+                <AnimatePresence>
+                    {showNuvo &&
+                        <motion.div className={styles.nuvoHolder} animate={{ opacity: 1 }} initial={{ opacity: 0 }} exit={{ opacity: 0 }}
                             onClick={() => {
                                 setShowCleancards(false); setShowE2(false);
-                                setShowPWD(false); setShowYelpcamp(false); 
+                                setShowYelpcamp(false); setShowRedd(false);
                                 setShowSpacer(false); setShowingProject(true);
-                                setRelocate(1); projDescSetter(5);
+                                setRelocate(1); projDescSetter(3);
                                 window.location.replace("/#projectHeader")
                             }}
                             onAnimationEnd={() => setRelocate(0)}
                             relocate={relocate}>
-                            <img src={redd} alt="" />
+                            <img src={nuvo} alt="Nuvo" />
+                        </motion.div>
+                    }
+                </AnimatePresence>
+                <AnimatePresence>
+                    {showRedd &&
+                        <motion.div className={styles.reddHolder} animate={{ opacity: 1 }} initial={{ opacity: 0 }} exit={{ opacity: 0 }}
+                            onClick={() => {
+                                setShowCleancards(false); setShowE2(false);
+                                setShowNuvo(false); setShowYelpcamp(false);
+                                setShowSpacer(false); setShowingProject(true);
+                                setRelocate(2); projDescSetter(5);
+                                window.location.replace("/#projectHeader")
+                            }}
+                            onAnimationEnd={() => setRelocate(0)}
+                            relocate={relocate}>
+                            <img src={redd} alt="ReddSupplements" />
                         </motion.div>
                     }
                 </AnimatePresence>
                 <AnimatePresence>
                     {showCleancards &&
-                        <motion.div className={styles.cleancardsHolder}  animate={{opacity: 1}} initial={{ opacity: 0 }} exit={{ opacity: 0 }}
+                        <motion.div className={styles.cleancardsHolder} animate={{ opacity: 1 }} initial={{ opacity: 0 }} exit={{ opacity: 0 }}
                             onClick={() => {
-                                setShowE2(false); setShowPWD(false);
-                                setShowYelpcamp(false); setShowRedd(false); 
+                                setShowE2(false); setShowNuvo(false);
+                                setShowYelpcamp(false); setShowRedd(false);
                                 setShowSpacer(false); setShowingProject(true);
-                                setRelocate(2); projDescSetter(0);
+                                setRelocate(3); projDescSetter(0);
                                 window.location.replace("/#projectHeader")
                             }}
                             onAnimationEnd={() => setRelocate(0)}
@@ -96,49 +113,33 @@ const ProjectSection = () => {
                 </AnimatePresence>
                 <AnimatePresence>
                     {showE2 &&
-                        <motion.div className={styles.e2Holder} animate={{opacity: 1}} initial={{ opacity: 0 }} exit={{ opacity: 0 }}
+                        <motion.div className={styles.e2Holder} animate={{ opacity: 1 }} initial={{ opacity: 0 }} exit={{ opacity: 0 }}
                             onClick={() => {
-                                setShowCleancards(false); setShowPWD(false);
-                                setShowYelpcamp(false); setShowRedd(false); 
+                                setShowCleancards(false); setShowNuvo(false);
+                                setShowYelpcamp(false); setShowRedd(false);
                                 setShowSpacer(false); setShowingProject(true);
-                                setRelocate(3); projDescSetter(2);
+                                setRelocate(4); projDescSetter(2);
                                 window.location.replace("/#projectHeader")
                             }}
                             onAnimationEnd={() => setRelocate(0)}
                             relocate={relocate}>
-                            <img src={e2} alt="" />
-                        </motion.div>
-                    }
-                </AnimatePresence>
-                <AnimatePresence>
-                    {showPWD &&
-                        <motion.div className={styles.pwdHolder} animate={{opacity: 1}} initial={{ opacity: 0 }} exit={{ opacity: 0 }}
-                            onClick={() => {
-                                setShowCleancards(false); setShowE2(false);
-                                setShowYelpcamp(false); setShowRedd(false); 
-                                setShowSpacer(false); setShowingProject(true);
-                                setRelocate(4); projDescSetter(3);
-                                window.location.replace("/#projectHeader")
-                            }}
-                            onAnimationEnd={() => setRelocate(0)}
-                            relocate={relocate}>
-                            <img src={purewebdev} alt="" />
+                            <img src={e2} alt="E2" />
                         </motion.div>
                     }
                 </AnimatePresence>
                 <AnimatePresence>
                     {showYelpcamp &&
-                        <motion.div className={styles.yelpcampHolder} animate={{opacity: 1}} initial={{ opacity: 0 }} exit={{ opacity: 0 }}
+                        <motion.div className={styles.yelpcampHolder} animate={{ opacity: 1 }} initial={{ opacity: 0 }} exit={{ opacity: 0 }}
                             onClick={() => {
                                 setShowCleancards(false); setShowE2(false);
-                                setShowPWD(false); setShowRedd(false); 
+                                setShowNuvo(false); setShowRedd(false);
                                 setShowSpacer(false); setShowingProject(true);
                                 setRelocate(5); projDescSetter(4);
                                 window.location.replace("/#projectHeader")
                             }}
                             onAnimationEnd={() => setRelocate(0)}
                             relocate={relocate}>
-                            <img src={yelpcamp} alt="" />
+                            <img src={yelpcamp} alt="Yelpcamp" />
                         </motion.div>
                     }
                 </AnimatePresence>
@@ -147,6 +148,7 @@ const ProjectSection = () => {
                 {showSpacer &&
                     <div className={styles.project}></div>
                 }
+
                 <AnimatePresence>
                     {showingProject &&
                         <motion.div className={styles.projectDesc}
@@ -178,7 +180,7 @@ const ProjectSection = () => {
                                 <button className={styles.projectNavButton} onClick={displayProjects}>All Projects</button>
                             </div>
                         </motion.div>
-                    }1
+                    }
                 </AnimatePresence>
             </div>
         </div>
