@@ -229,17 +229,10 @@ span {
     .portrait{
         max-width:12rem;
         max-height:18rem;
-        /*bottom:7vh;*/
     }
-    /*
-    .circle{
-        bottom:0;
-    }
-    */
     .circle svg{
         width:15rem;
         height:15rem;
-        /*right:-5vw;*/
     }
     span{
         padding:0 0.1rem;

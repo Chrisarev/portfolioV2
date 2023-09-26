@@ -16,6 +16,7 @@ const ProjectSection = () => {
     const [showYelpcamp, setShowYelpcamp] = useState(true);
     const [showRedd, setShowRedd] = useState(true);
     const [showSpacer, setShowSpacer] = useState(true);
+    const [projectName, setProjectName] = useState('');
 
     /* If set to true, only one project and its project description will be showing */
     const [showingProject, setShowingProject] = useState(false);
@@ -33,22 +34,27 @@ const ProjectSection = () => {
             setProjDesc('A full stack flashcard web application in which users can create an account and make multiple decks of flashcards to study. The Front-end was made with React and was backend made with Express.js + MongoDB.')
             setProjectLink('http://cleancards.herokuapp.com/')
             setGitProjLink('https://github.com/Chrisarev/cleanCards')
+            setProjectName('CleanCards')
         } else if (index == 2) {
             setProjDesc("A mock design firm website made in React.js to showcase my front-end skills. Backend made with Express.js. Animations made with framer-motion.")
             setProjectLink('https://experiencedesign.herokuapp.com/')
             setGitProjLink('https://github.com/Chrisarev/designreact')
+            setProjectName('E2 Design')
         } else if (index == 3) {
             setProjDesc('A mock design firm website featuring 3D graphics/animations. Front-end made with React.js. Backend made with Express.js.')
             setProjectLink('https://nuvo-023bc52f380c.herokuapp.com/')
-            setGitProjLink('https://github.com/Chrisarev/purewebdev')
+            setGitProjLink('https://github.com/Chrisarev/nuvoVite')
+            setProjectName('Nuvo Design')
         } else if (index == 4) {
             setProjDesc('Full CRUD application with authentication, authorization, CORS, and cookie management. Frontend made with ejs and backend made with Express.js.')
             setProjectLink('https://herokappcreatenew.herokuapp.com/campgrounds?')
             setGitProjLink('https://github.com/Chrisarev/yelpcamp')
+            setProjectName('YelpCamp')
         } else if (index == 5) {
             setProjDesc("A full stack supplement e-commerce website in which users can make an account, add items to their cart, and checkout. Frontend made with React + Vite. Backend made with Express.js.")
             setProjectLink('https://reddsupplements.herokuapp.com/')
             setGitProjLink('https://github.com/Chrisarev/reddsupplements/tree/master')
+            setProjectName('ReddSupplements')
         }
     }
 
@@ -56,13 +62,15 @@ const ProjectSection = () => {
     const displayProjects = () => {
         setShowCleancards(true); setShowE2(true); setShowNuvo(true); setShowYelpcamp(true);
         setShowRedd(true); setShowSpacer(true); setShowingProject(false); setRelocate(0);
-        setProjDesc(''); window.location.replace("/#projectHeader");
+        setProjDesc(''); setProjectName(''); window.location.replace("/#projectHeader");
     }
 
     return (
         <div id="projectSection" className={styles.panel}>
             <div id="projectHeader" className={styles.projectHeader}>My Work</div>
             <div className={styles.projectsHolder}>
+                {/* If user clicks on one project, all other showPROJECTNAME states are set to false, hiding 
+                all project images except selected project. */}
                 <AnimatePresence>
                     {showNuvo &&
                         <motion.div className={styles.nuvoHolder} animate={{ opacity: 1 }} initial={{ opacity: 0 }} exit={{ opacity: 0 }}
@@ -150,6 +158,8 @@ const ProjectSection = () => {
                 }
 
                 <AnimatePresence>
+                    {/* When user clicks on any projectImage, showingProject is set to true and singular
+                    project showcase format is visible. */}
                     {showingProject &&
                         <motion.div className={styles.projectDesc}
                             initial={{ opacity: 0 }}
@@ -160,6 +170,14 @@ const ProjectSection = () => {
                                 x: 1000,
                                 transition: { delay: 0, duration: 0 }
                             }}>
+                            <motion.h2 className={styles.projectName} initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ delay: 0.3 }}
+                                exit={{
+                                    opacity: 0,
+                                    x: 1000,
+                                    transition: { delay: 0, duration: 0 }
+                                }}>{projectName}</motion.h2>
                             {projDesc}
                             <div className={styles.linksHolder}>
                                 <Link to={projectLink}>

@@ -68,7 +68,10 @@
     background-size: 100% 100%;
     background-position: center 0;
 }
-
+.projectName{
+    padding-top:0;
+    margin-top:0;
+}
 .projectDesc {
     padding-top: 1rem;
     margin: 5px;
@@ -184,6 +187,9 @@ are removed*/
 
 
 @media (max-width:940px) {
+    .panel{
+        min-height:60vh;
+    }
     .projectsHolder{
         padding-left:1.25%;
     }

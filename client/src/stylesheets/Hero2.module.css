@@ -235,9 +235,8 @@
 @media (max-width:940px){
     .panel{
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
     }
-
     .textSection, .imageSection{
         align-items: center;
         justify-content: center;
